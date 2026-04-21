@@ -1,9 +1,5 @@
-# Core AI
-torch==2.5.0
-torchaudio==2.5.0
-numpy
-chromadb
-sentence-transformers
+# Core AI - Sistema Python (tem CUDA)
+# torch==2.7.1+cu118  # Já instalado no sistema
 
 # TTS - Voice Cloning
 coqui-tts==0.27.5
@@ -13,7 +9,6 @@ soundfile
 librosa
 
 # Audio
-PyAudio
 pygame
 pyaudio
 
