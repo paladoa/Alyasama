@@ -738,7 +738,7 @@ async def processar_ia(sys_prompt, texto, nome_ai, usuario_nome, launcher, modo_
             messages_ollama = [{"role": "user", "content": "Olá"}]
         
         last_message = messages_ollama[-1]["content"]
-        resposta_inicial = await asyncio.to_thread(get_ollama_response, last_message, "qwen2:7b", 0.7)
+        resposta_inicial = await asyncio.to_thread(get_ollama_response, last_message, "phi3:mini", 0.7)
         
         if not resposta_inicial:
             print(" Erro: Ollama não respondeu")
@@ -799,7 +799,7 @@ async def processar_ia(sys_prompt, texto, nome_ai, usuario_nome, launcher, modo_
             prompt_final = ""
             for msg in historico_api:
                 prompt_final += f"{msg.get('role', 'user')}: {msg.get('content', '')}\n"
-            resposta_final = await asyncio.to_thread(get_ollama_response, prompt_final, "qwen2", 0.7)
+            resposta_final = await asyncio.to_thread(get_ollama_response, prompt_final, "phi3:mini", 0.7)
 
         # 🧹 LIMPEZA BRUTAL FINAL: Remove qualquer outra tag <...> do terminal 
         resposta_final = re.sub(r'<[^>]+>', '', resposta_final).strip()
@@ -807,7 +807,7 @@ async def processar_ia(sys_prompt, texto, nome_ai, usuario_nome, launcher, modo_
         # 🔥 NOVO: Se a IA enviar só a tag e a resposta ficar vazia, o próprio LLM gera a frase curta!
         if not resposta_final:
             prompt_fallback = f"system: Ava como {nome_ai}, usando a sua personalidade. Fale uma frase curta (entre 1 a 7 palavras) confirmando que completou o comando. Não use tags."
-            resposta_final = await asyncio.to_thread(get_ollama_response, prompt_fallback, "qwen2", 0.9)
+            resposta_final = await asyncio.to_thread(get_ollama_response, prompt_fallback, "phi3:mini", 0.9)
             if not resposta_final:
                 resposta_final = "Feito."
 
