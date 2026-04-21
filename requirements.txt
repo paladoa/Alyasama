@@ -1,0 +1,40 @@
+# Core AI
+torch==2.5.0
+torchaudio==2.5.0
+numpy
+chromadb
+sentence-transformers
+
+# TTS - Voice Cloning
+coqui-tts==0.27.5
+transformers>=4.40,<4.60
+pypinyin
+soundfile
+librosa
+
+# Audio
+PyAudio
+pygame
+pyaudio
+
+# Vision & Screen
+opencv-python
+Pillow
+faster-whisper
+
+# API & Web
+requests
+groq
+openai
+python-dotenv
+websocket-client
+ddgs
+
+# System
+keyboard
+pywin32
+psutil
+packaging
+
+# GUI
+PyQt5

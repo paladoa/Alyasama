@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv_gptsovits/
+venv/
+
+# Environment
+.env
+.env.*
+
+# Audio
+voz_referencia.wav
+vocal_*.wav
+vocal_*.mp3
+test_*.wav
+test_*.mp3
+test_audio.mp3
+
+# Models (download separately)
+GPT-SoVITS-Windows/
+ffmpeg*.zip
+ffmpeg-master*/
+模型文件/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build tools
+vs_buildtools.exe
+
+# Test files (keep only run.py and Aliya/)
+test_*.py
+check_*.py
+baixar_*.py
+cortar_*.py
+instalar_*.py
+download_*.py
+resetar_*.py
+install_gpt_deps.py
+
+# Readmes (keep only main)
+README_*.md
+!README.md
+
+# Scripts
+*.bat
+*.vbs
+*.ahk
+!Alya.bat
